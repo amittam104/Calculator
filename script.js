@@ -8,20 +8,32 @@
 // 6. If user clicks 'Reset' button everythin will reset back to the orignal state.
 // 7. If user clicks 'Del' the last value (either number or operator will get removed)
 
-let number1 = 0;
-let operator = "";
-let number2 = 0;
-
+// Get the first integer Value
 let displayBox = document.querySelector(".display-box");
 
-// Handle button click function
-function handleButtonClick(event) {
+function buttonClickValue(event) {
   const buttonValue = event.target.textContent;
+
   displayBox.textContent += buttonValue;
 }
 
 const numberButtons = document.querySelectorAll(".btn.number");
 
 numberButtons.forEach((button) => {
-  button.addEventListener("click", handleButtonClick);
+  button.addEventListener("click", buttonClickValue);
+});
+
+// Get the Operator
+const operatorButton = document.querySelectorAll(".btn.operator");
+// let operatorType = operatorButton.textContent;
+
+operatorButton.forEach((button) => {
+  button.addEventListener("click", buttonClickValue);
+});
+
+// Getting the final Value
+const equalsTo = document.querySelector(".btn.equals").textContent;
+
+document.querySelector(".equals").addEventListener("click", function () {
+  displayBox.textContent = eval(displayBox.textContent);
 });
