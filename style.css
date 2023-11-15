@@ -85,16 +85,22 @@ h1 {
   height: 5rem;
 }
 
-.display {
+/* .display {
   display: grid;
-}
+} */
 
 .display-box {
-  height: 7rem;
+  /* height: 7rem; */
+  height: 6rem;
   background-color: #04364a;
   color: #fff;
   font-size: 3.2rem;
   border-radius: 0.8rem;
   padding: 1.4rem;
   text-align: right;
+}
+
+.backspace,
+.reset {
+  text-transform: uppercase;
 }

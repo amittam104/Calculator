@@ -37,3 +37,17 @@ const equalsTo = document.querySelector(".btn.equals").textContent;
 document.querySelector(".equals").addEventListener("click", function () {
   displayBox.textContent = eval(displayBox.textContent);
 });
+
+// Deleting the last number or operator (Del)
+document.querySelector(".backspace").addEventListener("click", function () {
+  displayBox.textContent = displayBox.textContent.slice(0, -1);
+
+  if (displayBox.textContent === "") {
+    displayBox.textContent;
+  }
+});
+
+// Reset the calculator after the Reset button
+document.querySelector(".reset").addEventListener("click", function () {
+  displayBox.textContent = "";
+});
